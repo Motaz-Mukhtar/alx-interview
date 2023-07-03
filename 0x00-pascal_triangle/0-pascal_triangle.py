@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-    Create a function def pascal_triangle(n)
-"""
+"""Pascal's triangle"""
 
 
 def pascal_triangle(n):
@@ -13,7 +11,6 @@ def pascal_triangle(n):
 
     triangle_list = ['1']
     main_list = []
-    # Copy from triangle_list
     copy_list = []
 
     main_list.append(triangle_list.copy())
@@ -31,5 +28,4 @@ def pascal_triangle(n):
 
         main_list.append(triangle_list.copy())
 
-    # return list of lists.
     return main_list
