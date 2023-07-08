@@ -14,9 +14,12 @@ def canUnlockAll(boxes):
 
     for box in opened_boxes:
         for key in box:
-            if boxes[key] in opened_boxes:
-                continue
-            opened_boxes.append(boxes[key])
+            try:
+                if boxes[key] in opened_boxes:
+                    continue
+                opened_boxes.append(boxes[key])
+            except IndexError:
+                pass
 
     if len(boxes) == len(opened_boxes):
         return True
