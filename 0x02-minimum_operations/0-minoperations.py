@@ -14,17 +14,8 @@ def minOperations(n: int) -> int:
     copy_list = []
     number_of_operations = 0
 
-    if n <= 0:
-        return 0
-
-    if n == 1:
-        return 0
-
-    if n == 2:
-        return 2
-
-    if n == 3:
-        return 3
+    #if n <= 0:
+     #   return 0
 
     num = 0
     while True:
