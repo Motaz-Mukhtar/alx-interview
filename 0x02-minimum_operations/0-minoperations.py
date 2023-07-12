@@ -30,14 +30,14 @@ def minOperations(n: int) -> int:
     while True:
         # Even
         # if even just Paste
-        if num % 2 == 0:
+        if n % len(text_list) == 0:
             copy_list = text_list.copy()
             for i in copy_list:
                 text_list.append(i)
             number_of_operations += 2
         # Odd
         # if odd Copy, and Paste
-        elif num % 2 == 1:
+        else:
             for i in copy_list:
                 text_list.append(i)
             number_of_operations += 1
