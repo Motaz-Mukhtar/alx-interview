@@ -17,7 +17,7 @@ def pascal_triangle(n):
 
     main_list.append(triangle_list.copy())
     if n <= 0:
-        return main_list
+        return []
 
     for i in range(n - 1):
         triangle_list.append('0')
