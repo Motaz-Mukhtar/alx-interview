@@ -6,9 +6,9 @@ Pascal's triangle
 
 def pascal_triangle(n):
     """
-    returns a list of lists of
-    integers representing the
-    Pascals triangle of n.
+        returns a list of lists of
+        integers representing the
+        Pascals triangle of n.
     """
 
     triangle_list = ['1']
@@ -25,6 +25,8 @@ def pascal_triangle(n):
         copy_list.reverse()
 
         for index in range(len(triangle_list)):
-            triangle_list[index] += int(copy_list[index]))
+            triangle_list[index] += int(copy_list[index])
+
         main_list.append(list(triangle_list))
+
     return main_list
