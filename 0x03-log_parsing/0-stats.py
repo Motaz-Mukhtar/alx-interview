@@ -14,12 +14,12 @@ if __name__ == "__main__":
     count_lines = 0
     try:
         for request in sys.stdin:
+            count_lines += 1
             request_list = request.split(' ')
-            if len(request_list) > 2:
+            if len(request_list) == 9:
                 if request_list[-2] in code_stats_dict:
                     code_stats_dict[request_list[-2]] += 1
             total_size += int(request_list[-1])
-            count_lines += 1
             if count_lines == 10:
                 print("File size: {}".format(total_size))
                 {print("{}: {}".format(key, value)) for key, value in
