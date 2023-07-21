@@ -12,9 +12,8 @@ if __name__ == "__main__":
                        '403': 0, '404': 0, '405': 0, '500': 0}
     total_size = 0
     count_lines = 0
-
-    for response in sys.stdin:
-        try:
+    try:
+        for response in sys.stdin:
             response_list = response.split(' ')
             code_stats_dict[response_list[7]] += 1
             total_size += int(response_list[-1])
@@ -22,9 +21,11 @@ if __name__ == "__main__":
             if count_lines == 10:
                 print("File size: {}".format(total_size))
                 {print("{}: {}".format(key, value)) for key, value in
-                 code_stats_dict.items() if value != 0}
+                 sorted(code_stats_dict.items()) if value != 0}
                 count_lines = 0
-        except Exception:
-            print("File size: {}".format(total_size))
-            {print("{}: {}".format(key, value)) for key, value in
-             code_stats_dict.items() if value != 0}
+    except Exception:
+        pass
+    finally:
+        print("File size: {}".format(total_size))
+        {print("{}: {}".format(key, value)) for key, value in
+         sorted(code_stats_dict.items()) if value != 0}
