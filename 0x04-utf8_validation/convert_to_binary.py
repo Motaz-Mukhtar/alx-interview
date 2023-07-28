@@ -15,5 +15,8 @@ def to_binary(num: int):
             binary_list.append(1)
         num = math.trunc(num / 2)
 
+    while len(binary_list) < 8:
+        binary_list.append(0)
+    binary_list.reverse()
     binary_list.reverse()
     return binary_list
