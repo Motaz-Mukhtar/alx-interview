@@ -12,8 +12,6 @@ def validUTF8(data):
         valid UTF-8 ending, else return False
     """
     binary_data = [to_binary(i) for i in data]
-    if len(binary_data) >= 8:
-        return False
     for binary_list in binary_data:
         for index in range(len(binary_list)):
             if binary_list[0] == 0:
