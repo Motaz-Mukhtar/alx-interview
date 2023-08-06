@@ -95,12 +95,10 @@ def main(n: int) -> List[List]:
         sys.exit(1)
 
     n_queens(board, 0)
+
     results.sort()
-    return results
+    for solution in results:
+        print(solution)
 
 
-all_solutions = main(N)
-
-
-for solution in all_solutions:
-    print(solution)
+main(N)
