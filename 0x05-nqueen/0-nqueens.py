@@ -64,8 +64,7 @@ def n_queens(board: list, col: int) -> bool:
             for y in range(len(board)):
                 if board[x][y] == 1:
                     result.append([x, y])
-        result.sort()
-        print(result)
+        results.append(result)
         return True
 
     res = False
@@ -95,5 +94,9 @@ def main(n: int) -> list:
         sys.exit(1)
 
     n_queens(board, 0)
+    results.sort()
+    return results
 
-main(N)
+for solution in main(N):
+    print(solution)
+
