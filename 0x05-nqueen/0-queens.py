@@ -2,7 +2,6 @@
 """
     Solve n_queens Problem, using backtrack Algorithm.
 """
-from typing import List
 import sys
 
 
@@ -11,14 +10,14 @@ results = []
 try:
     N = int(sys.argv[1])
 except IndexError:
-    print("Usage: nqueens N")
+    print("nqueens N")
     sys.exit(1)
 except ValueError:
     print("N must be a number")
     sys.exit(1)
 
 
-def accept(board: List[List], row: int, col: int) -> bool:
+def accept(board: list, row: int, col: int) -> bool:
     """
         Return True if the queen is safe,
         else return false.
@@ -53,7 +52,7 @@ def accept(board: List[List], row: int, col: int) -> bool:
     return True
 
 
-def n_queens(board: List[List], col: int) -> bool:
+def n_queens(board: list, col: int) -> bool:
     """
         Find all possible solutions for N queens
         problem, in N*N board..
@@ -81,7 +80,7 @@ def n_queens(board: List[List], col: int) -> bool:
     return res
 
 
-def main(n: int) -> List[List]:
+def main(n: int) -> list:
     """
         Create N*N chess board and
         run n_queens() function, and
