@@ -19,5 +19,4 @@ def rotate_2d_matrix(matrix):
             row -= 1
 
         matrix[col] = temp
-        print(temp)
         col += 1
