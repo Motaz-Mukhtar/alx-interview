@@ -2,6 +2,7 @@
 """
     Making Change.
 """
+import math
 
 
 def makeChange(coins, total):
@@ -10,14 +11,17 @@ def makeChange(coins, total):
     determine the fewest number of coins needed
     to meet a given amount total.
     """
+    n = 0
+    coins.sort(reverse=True)
     if total < 0:
         return 0
 
-    total_coins = sum(coins)
+    for coin in coins:
+        if total % coin <= total:
+            n += math.trunc(total / coin)
+            total %= coin
 
-    n = total - total_coins
+    if total == 0:
+        return n
 
-    if n < 0:
-        return -1
-
-    return n
+    return -1
