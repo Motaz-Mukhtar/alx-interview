@@ -35,6 +35,9 @@ def isWinner(x, nums):
         Return name of the player that won
         the most rounds.
     """
+    if x < 1 or not nums:
+        return None
+
     FIRST_PLAYER = 'Maria'
     SECOND_PLAYER = 'Ben'
     FIRST_PLAYER_SCORE = 0
