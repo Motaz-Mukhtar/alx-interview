@@ -29,6 +29,7 @@ def prime_left(nums):
 
     return False
 
+
 def isWinner(x, nums):
     """
         Return name of the player that won
@@ -53,9 +54,9 @@ def isWinner(x, nums):
                     if round_list[num] ** 2 in round_list:
                         index = round_list.index(round_list[num] ** 2)
                         del round_list[index]
-                    
+
                     del round_list[num]
-                
+
                 # SECOND_PLAYER picks prime number and its multiple
                 elif turn == SECOND_PLAYER:
                     turn = FIRST_PLAYER
