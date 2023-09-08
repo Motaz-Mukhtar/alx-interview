@@ -5,7 +5,7 @@ Main file for testing
 
 isWinner = __import__('0-prime_game').isWinner
 
-nums = [0] * 100
+nums = [0] * 100000
 for i in range(100):
     nums[i] = i * i
 
