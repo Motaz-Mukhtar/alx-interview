@@ -38,7 +38,7 @@ def isWinner(x, nums):
         turn = FIRST_PLAYER
         round_list = [i for i in range(1, nums[i] + 1)]
 
-        for num in range(len(round_list)):        
+        for num in range(len(round_list)):
             if is_prime(round_list[num]):
                 if round_list[num] in skiped_nums:
                     continue
